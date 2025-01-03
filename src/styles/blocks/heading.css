@@ -1,0 +1,17 @@
+.heading {
+  font-family: var(--second-family);
+  font-weight: 100;
+  letter-spacing: -0.05em;
+  text-transform: capitalize;
+  color: var(--color-primary);
+  margin: 0;
+  font-size: 128px;
+}
+
+.heading--small {
+  font-size: 64px;
+}
+
+.heading--color--secondary {
+  color: var(--color-secondary);
+}
