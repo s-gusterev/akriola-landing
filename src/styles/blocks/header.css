@@ -1,0 +1,158 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr minmax(320px, 795px);
+  gap: 0 67px;
+  padding-left: 80px;
+}
+
+.header__navigation {
+  grid-column: 1/2;
+  margin-top: 56px;
+  display: flex;
+  align-items: flex-start;
+  height: max-content;
+}
+
+.header__logo {
+  margin-right: auto;
+}
+
+.header__list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.header__item {
+  margin-bottom: 16px;
+}
+
+.header__item:last-child {
+  margin-bottom: 0;
+}
+
+.header__link {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.header__link:hover {
+  opacity: 1 !important;
+}
+
+.header__item:first-child .header__link {
+  font-weight: 700;
+  position: relative;
+}
+
+.header__item:first-child .header__link::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  top: 50%;
+  right: -28px;
+  background-image: url('./src/images/arrow.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+
+.header__item:nth-child(2) .header__link {
+  opacity: 0.6;
+}
+
+.header__item:nth-child(3) .header__link {
+  opacity: 0.4;
+}
+
+.header__item:nth-child(4) .header__link {
+  opacity: 0.2;
+}
+
+.header__button-nav {
+  margin-left: 48px;
+}
+
+.header__title {
+  grid-column: 1/2;
+  font-family: var(--second-family);
+  font-style: italic;
+  font-weight: 100;
+  font-size: 160px;
+  letter-spacing: -0.05em;
+  text-transform: capitalize;
+  color: var(--color-primary);
+  margin-top: 97px;
+  margin-bottom: 112px;
+}
+
+.header__title span {
+  font-weight: 500;
+  font-style: normal;
+}
+
+.header__desc {
+  grid-column: 1/2;
+  display: flex;
+  align-items: flex-end;
+  gap: 64px;
+  margin-bottom: 131px;
+}
+
+.header__desc-image {
+  width: 229px;
+  height: 238px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.header__desc-text-paragraph {
+  max-width: 450px;
+  margin-bottom: 48px;
+}
+
+.header__buttons {
+  display: flex;
+  gap: 24px;
+}
+
+.header__flag {
+  grid-column: 1/2;
+  position: relative;
+  width: max-content;
+  margin-bottom: 20px;
+}
+
+.header__flag::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 21px;
+  top: 50%;
+  right: -28px;
+  background-image: url('./src/images/flag.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+
+.header__image {
+  grid-column: 2/3;
+  grid-row: 1/5;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

@@ -1,13 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Acriola Landing Page</title>
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="page">
+    <header class="header">
+      <div class="header__navigation">
+        <a href="#" class="logo header__logo">Akriola</a>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="#" class="header__link">Home</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">About the Event</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">Speakers</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">Agenda</a>
+            </li>
+          </ul>
+        </nav>
+        <button type="button" class="button button--primary header__button-nav">
+          Get in Touch
+        </button>
+      </div>
+      <h1 class="header__title">
+        Empowering the Next Generation of <span>Entrepreneurs</span>
+      </h1>
+      <div class="header__desc">
+        <img
+          class="header__desc-image"
+          src="./src/images/architecture-4179270_640.jpg"
+          alt="Header Description"
+        />
+        <div class="header__desc-text">
+          <p class="text header__desc-text-paragraph">
+            Join Akriola, where business leaders, innovators, and entrepreneurs
+            come together to share insights, inspiration, and networking
+            opportunities
+          </p>
+          <div class="header__buttons">
+            <a href="#" class="button button--primary"> Get in Touch </a>
+            <a href="#" class="button button--secondary"> Learn More </a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="text header__flag">Claim Free Seat</a>
+      <div class="header__image">
+        <img
+          src="./src/images/skyscraper-9226515_1280.jpg"
+          alt="Header Image"
+        />
+      </div>
+    </header>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
