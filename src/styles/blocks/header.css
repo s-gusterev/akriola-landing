@@ -120,6 +120,7 @@
 .header__buttons {
   display: flex;
   gap: 24px;
+  flex-wrap: wrap;
 }
 
 .header__flag {
@@ -145,9 +146,23 @@
 .header__image {
   grid-column: 2/3;
   grid-row: 1/5;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  position: relative;
+}
+
+.header__image::after {
+  content: '';
+  position: absolute;
+  width: 165px;
+  height: 167px;
+  top: 418px;
+  left: -82.5px;
+  background-image: url('./src/images/star.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation-name: rotation;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .header__image img {
@@ -155,4 +170,129 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1440px) {
+  .header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-right: 80px;
+    margin: 0 auto;
+  }
+
+  .header__image {
+    grid-column: 1 / 2;
+    grid-row: 3 / 3;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 50px;
+  }
+
+  .header__image::after {
+    top: -30px;
+    left: 90%;
+    width: 61px;
+    height: 62px;
+  }
+
+  .header__title {
+    font-size: 120px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .header__title {
+    font-size: 90px;
+    margin-top: 67px;
+    margin-bottom: 72px;
+  }
+
+  .header__desc {
+    margin-bottom: 101px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  .header__title {
+    font-size: 66px;
+    margin-top: 69px;
+    margin-bottom: 52px;
+  }
+
+  .header__link {
+    font-size: 16px;
+  }
+
+  .header__desc-image {
+    display: none;
+  }
+
+  .header__navigation {
+    gap: 19px;
+  }
+
+  .header__button-nav {
+    margin-left: 0;
+  }
+
+  .header__image::after {
+    left: 85%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__link {
+    font-size: 10px;
+  }
+
+  .header__item {
+    margin-bottom: 8px;
+  }
+
+  .header__title {
+    font-size: 48px;
+    margin-bottom: 48px;
+  }
+
+  .header__image {
+    margin-bottom: 24px;
+  }
+
+  .header__button-nav {
+    font-size: 10px;
+    padding: 10px 20px;
+    margin-left: 0;
+  }
+
+  .header__desc {
+    margin-bottom: 64px;
+  }
+
+  .header__buttons .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .header__image::after {
+    left: 80%;
+  }
 }
