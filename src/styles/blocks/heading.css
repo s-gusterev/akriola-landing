@@ -15,3 +15,33 @@
 .heading--color--secondary {
   color: var(--color-secondary);
 }
+
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 96px;
+  }
+
+  .heading--small {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 72px;
+  }
+
+  .heading--small {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 40px;
+  }
+
+  .heading--small {
+    font-size: 26px;
+  }
+}

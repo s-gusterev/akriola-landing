@@ -3,7 +3,23 @@ import './style.css';
 
 const scrollContainer = document.querySelector('.speakers__list');
 
-scrollContainer.addEventListener('wheel', (e) => {
+// Функция для проверки устройства
+function isMobile() {
+  return window.innerWidth <= 768; // Условие для мобильных устройств
+}
+
+// Функция для добавления обработчика
+function addScrollListener() {
+  scrollContainer.addEventListener('wheel', scrollHandler);
+}
+
+// Функция для удаления обработчика
+function removeScrollListener() {
+  scrollContainer.removeEventListener('wheel', scrollHandler);
+}
+
+// Обработчик события прокрутки
+function scrollHandler(e) {
   const delta = e.deltaY; // Направление прокрутки (вниз/вверх)
 
   // Определяем, можно ли ещё прокручивать горизонтально
@@ -17,5 +33,19 @@ scrollContainer.addEventListener('wheel', (e) => {
     e.preventDefault();
     scrollContainer.scrollBy({ left: delta, behavior: 'smooth' });
   }
-  // Если достигли начала или конца, событие пропускается, чтобы прокручивалась страница
-});
+}
+
+// Отслеживание изменения размера окна
+function handleResize() {
+  if (isMobile()) {
+    // Если мобильное устройство, добавляем обработчик
+    addScrollListener();
+  } else {
+    // Если не мобильное устройство, удаляем обработчик
+    removeScrollListener();
+  }
+}
+
+// Инициализация
+handleResize(); // Проверяем начальное состояние
+window.addEventListener('resize', handleResize); // Отслеживаем изменение размера окна
