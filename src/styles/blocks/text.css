@@ -7,6 +7,10 @@
   text-decoration: none;
 }
 
+.text--color--secondary {
+  color: var(--color-secondary);
+}
+
 @media (max-width: 1024px) {
   .text {
     font-size: 20px;

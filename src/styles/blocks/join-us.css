@@ -1,0 +1,82 @@
+.join-us {
+  padding-left: 99px;
+  padding-right: 107px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 200px;
+}
+
+.join-us__title {
+  margin-bottom: 112px;
+}
+
+.join-us__desc {
+  margin-bottom: 48px;
+  max-width: 594px;
+}
+
+.join-us__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 118px;
+  padding: 30px 90px;
+  border: 1px solid var(--color-primary);
+  margin-bottom: 24px;
+}
+
+.join-us__item-desc {
+  max-width: 530px;
+}
+
+.join-us__item .join-us__item-desc {
+  height: 0;
+  opacity: 0;
+}
+
+.join-us__item:last-child {
+  margin-bottom: 0;
+}
+
+.join-us__item--active {
+  background-color: var(--color-primary);
+  padding: 60px 90px;
+  border: none;
+  position: relative;
+}
+
+.join-us__item--active::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -18.5px;
+  width: 37px;
+  height: 37px;
+  transform: translateY(-50%);
+  background-color: var(--color-secondary);
+  border-radius: 100%;
+  border: 1px solid var(--color-primary);
+}
+
+.join-us__item--active .join-us__item-desc {
+  height: auto;
+  opacity: 1;
+}
+
+.join-us__item .join-us__item-image svg {
+  height: 0;
+}
+
+.join-us__item--active .join-us__item-image svg {
+  height: auto;
+}
+
+.join-us__item-title {
+  cursor: pointer;
+}
+
+.join-us__item--active .join-us__item-title {
+  margin-bottom: 40px;
+}
