@@ -57,7 +57,7 @@
   height: 10px;
   top: 50%;
   right: -28px;
-  background-image: url('./src/images/arrow.svg');
+  background-image: url('../../images/arrow.svg');
   background-repeat: no-repeat;
   background-size: contain;
   transform: translateY(-50%);
@@ -138,7 +138,7 @@
   height: 21px;
   top: 50%;
   right: -28px;
-  background-image: url('./src/images/flag.svg');
+  background-image: url('../../images/flag.svg');
   background-repeat: no-repeat;
   background-size: contain;
   transform: translateY(-50%);
@@ -157,7 +157,7 @@
   height: 167px;
   top: 418px;
   left: -82.5px;
-  background-image: url('./src/images/star.svg');
+  background-image: url('../../images/star.svg');
   background-repeat: no-repeat;
   background-size: cover;
   animation-name: rotation;
@@ -171,15 +171,6 @@
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 @media (max-width: 1440px) {

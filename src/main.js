@@ -1,5 +1,6 @@
 import 'normalize.css';
 import './style.css';
+import { gsap } from 'gsap';
 
 const scrollContainer = document.querySelector('.speakers__list');
 
@@ -50,45 +51,71 @@ function handleResize() {
 handleResize(); // Проверяем начальное состояние
 window.addEventListener('resize', handleResize); // Отслеживаем изменение размера окна
 
-import { gsap } from 'gsap';
-
 document.addEventListener('DOMContentLoaded', () => {
   const accordionItems = document.querySelectorAll('.join-us__item');
 
+  // Задаем начальное состояние для всех элементов
+  accordionItems.forEach((item) => {
+    const content = item.querySelector('.join-us__item-desc');
+    const icon = item.querySelector('.join-us__item-image');
+    const isActive = item.classList.contains('join-us__item--active');
+
+    if (isActive) {
+      // Если элемент активен по умолчанию, раскрываем его
+      gsap.set(content, { height: 'auto', opacity: 1 });
+      gsap.set(icon, { height: 'auto', opacity: 1 });
+    } else {
+      // Если элемент не активен, скрываем его
+      gsap.set(content, { height: 0, opacity: 0 });
+      gsap.set(icon, { height: 0, opacity: 0 });
+    }
+  });
+
+  // Теперь добавляем обработчики кликов, как и раньше
   accordionItems.forEach((item) => {
     const title = item.querySelector('.join-us__item-title');
     const content = item.querySelector('.join-us__item-desc');
     const icon = item.querySelector('.join-us__item-image');
 
     title?.addEventListener('click', () => {
-      // Закрыть все открытые элементы
       accordionItems.forEach((otherItem) => {
         if (otherItem !== item) {
           const otherTitle = otherItem.querySelector('.join-us__item-title');
           const otherContent = otherItem.querySelector('.join-us__item-desc');
-          const otherIcon = item.querySelector('.join-us__item-image');
+          const otherIcon = otherItem.querySelector('.join-us__item-image');
 
           otherItem.classList.remove('join-us__item--active');
           otherTitle?.classList.remove('heading--color--secondary');
           otherContent?.classList.remove('text--color--secondary');
 
           gsap.to(otherContent, { height: 0, opacity: 0, duration: 0.3 });
-          gsap.to(otherIcon, { height: 0, opacity: 0, duration: 0.3 });
+          gsap.to(otherIcon, {
+            height: 0,
+            opacity: 0,
+            duration: 0.3,
+          });
         }
       });
 
-      // Переключить состояние текущего элемента
       const isActive = item.classList.toggle('join-us__item--active');
       if (isActive) {
         title.classList.add('heading--color--secondary');
         content.classList.add('text--color--secondary');
         gsap.to(content, { height: 'auto', opacity: 1, duration: 0.3 });
-        gsap.to(icon, { height: 'auto', opacity: 1, duration: 0.5 });
+        gsap.to(icon, {
+          height: 'auto',
+          opacity: 1,
+          duration: 0.3,
+        });
       } else {
         title.classList.remove('heading--color--secondary');
         content.classList.remove('text--color--secondary');
         gsap.to(content, { height: 0, opacity: 0, duration: 0.3 });
-        gsap.to(icon, { height: 0, opacity: 0, duration: 0.5 });
+        gsap.to(icon, {
+          height: 0,
+          opacity: 0,
+          duration: 0.3,
+        });
       }
     });
   });
