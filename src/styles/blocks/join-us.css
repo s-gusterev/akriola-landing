@@ -126,10 +126,18 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .join-us {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
 @media (max-width: 1280px) {
   .join-us {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .join-us__title {
     margin-bottom: 32px;
     grid-column: 1/-1;
