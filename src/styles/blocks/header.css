@@ -288,3 +288,9 @@
     left: 80%;
   }
 }
+
+@media (max-width: 360px) {
+  .header__title {
+    font-size: 42px;
+  }
+}
