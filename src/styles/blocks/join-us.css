@@ -126,13 +126,6 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .join-us {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-
 @media (max-width: 1280px) {
   .join-us {
     grid-template-columns: repeat(2, 1fr);
@@ -178,6 +171,13 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .join-us {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
 @media (max-width: 992px) {
   .join-us__item {
     gap: 36px;
@@ -189,6 +189,7 @@
     padding-left: 24px;
     padding-right: 24px;
     column-gap: 10px;
+    margin-bottom: 120px;
   }
 
   .join-us__item-image svg {
