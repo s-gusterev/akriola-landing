@@ -1,3 +1,5 @@
+@import url(../node_modules/vanilla-infinite-marquee/infinite-marquee.css);
+
 @import url(./vendor/fonts/fonts.css);
 @import url(./styles/global.css);
 @import url(./styles/blocks/page.css);
@@ -12,3 +14,4 @@
 @import url(./styles/blocks/experience.css);
 @import url(./styles/blocks/events.css);
 @import url(./styles/blocks/visionaries.css);
+@import url(./styles/blocks/partners.css);
