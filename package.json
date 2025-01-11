@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "gsap": "^3.12.5",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "vanilla-infinite-marquee": "^1.0.12"
   }
 }

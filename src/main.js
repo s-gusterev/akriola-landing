@@ -120,3 +120,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+import InfiniteMarquee from 'vanilla-infinite-marquee';
+
+new InfiniteMarquee({
+  element: '.partners__list--top',
+  speed: 50000,
+  smoothEdges: false,
+  direction: 'right',
+  spaceBetween: '88px',
+  duplicateCount: 2,
+});
+
+new InfiniteMarquee({
+  element: '.partners__list--bottom',
+  speed: 55000,
+  smoothEdges: true,
+  direction: 'right',
+  spaceBetween: '88px',
+  duplicateCount: 2,
+});
