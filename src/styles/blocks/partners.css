@@ -1,6 +1,5 @@
 .partners {
   padding-bottom: 200px;
-  margin-bottom: 125px;
   display: grid;
   grid-template-columns: 1fr max-content;
   align-items: center;
